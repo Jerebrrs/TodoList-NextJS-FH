@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { SidebarItem } from "./SidebarItem"
 import { CiLogout } from "react-icons/ci"
-import { IoCalendarOutline, IoCheckboxOutline } from "react-icons/io5"
+import { IoAccessibilityOutline, IoBasketOutline, IoCalendarOutline, IoCheckboxOutline, IoCodeWorking, IoListOutline } from "react-icons/io5"
 
 const menuItem = [
     {
@@ -14,8 +14,24 @@ const menuItem = [
         icon: <IoCheckboxOutline />,
         path: "/dashboard/rest-todos",
         title: "Rest Todos"
+    },
+    {
+        icon: <IoAccessibilityOutline />,
+        path: "/dashboard/server-todos",
+        title: "Server Actions"
+    },
+    {
+        icon: <IoCodeWorking />,
+        path: "/dashboard/cookies",
+        title: "Cookies"
+    },
+    {
+        icon: <IoBasketOutline />,
+        path: "/dashboard/products",
+        title: "Productos"
     }
 ]
+
 export const Sidebar = () => {
     return (
         <aside className="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
